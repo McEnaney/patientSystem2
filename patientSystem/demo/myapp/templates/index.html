@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+<style>
+    .landing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("{% static '/images/img.png' %}");
+        background-size: cover;
+        background-position: center;
+    }
+    .landing-content {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .landing-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .landing-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="landing-container">
+    <div class="landing-content">
+        <h1>Patient Management System</h1>
+        <p>Site restricted to authorised staff only</p>
+        <a href="/admin" class="landing-button">Login</a>
+    </div>
+</div>
+{% endblock %}
